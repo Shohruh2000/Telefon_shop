@@ -1,12 +1,12 @@
 from telegram.ext import Updater,CommandHandler,CallbackContext,MessageHandler,Filters,CallbackQueryHandler
-from telegram import Update,ReplyKeyboardMarkup,KeyboardButton,InlineKeyboardMarkup,InlineKeyboardButton
+from telegram import Update,ReplyKeyboardMarkup,KeyboardButton,InlineKeyboardMarkup,InlineKeyboardButton , Bot
 import os
 from db import DB
 from cartdb import Cart
 # get token from env
 TOKEN = os.environ['TOKEN']
-db = DB('SmartphoneBot/db.json')
-cart = Cart('SmartphoneBot/cartdb.json')
+db = DB('Telefon_shop/db.json')
+cart = Cart('Telefon_shop/cartdb.json')
 
 
 def start(update: Update, context: CallbackContext):
@@ -200,3 +200,5 @@ def main():
     updater.idle()
 
 # main()
+
+bot = Bot.set_webhook('https://botechotest.pythonanywhere.com/webhook')
