@@ -200,5 +200,3 @@ def main():
     updater.idle()
 
 # main()
-
-bot = Bot.set_webhook('https://botechotest.pythonanywhere.com/webhook')
